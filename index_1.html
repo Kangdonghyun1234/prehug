@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=""> 
+    <meta name="author" content="">
+
+    <title>Kids Gao</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_animation.css">
+	
+	
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollmagic.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
+
+
+</head><title></title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body style="position: relative;">
+<!-- Backgroud-->
+<section id="background">
+	
+
+
+
+
+	<!-- Navigator -->
+	<nav id="cd-vertical-nav">
+		<ul>
+			<li>
+				<a href="#intro" data-number="1">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#farm1" data-number="2">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#farm3" data-number="3">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#forest2" data-number="4">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#science" data-number="5">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#night2" data-number="6">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+            <li>
+				<a href="#kitchen" data-number="7">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+            <li>
+				<a href="#color1" data-number="8">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+            <li>
+				<a href="#color2" data-number="9">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+            <li>
+				<a href="#color3" data-number="10">
+					<span class="cd-dot"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	
+    <!-- Intro -->
+	<header id="intro">
+
+		<div class="introWrap">
+			<div class="logo"></div>
+        	<div class="lion"></div>
+        	<div class="rabbit"></div>
+        	<div class="bear"></div>
+        	<div class="monkey"></div>
+    	</div>
+
+
+
+		<div class="cloud">
+            <div class="rightCloud"></div>
+			<div class="leftCloud"></div>
+			<div class="dragonfly"></div>
+        </div>
+
+	
+
+
+
+
+        
+    	<script>
+			var controller;
+			$(document).ready(function($) {
+				// init controller
+				controller = new ScrollMagic();
+			});
+            
+            $(document).scroll(function() {
+            	var width = $(window).width();
+
+            	if((width >= 0) && (width <= 767)) {
+            		if($(document).scrollTop()>=200){
+                    	$('.leftCloud').stop().animate({left: '-100px'}, 800);
+                    	$('.rightCloud').stop().animate({right: '-100px'}, 800);
+                	} else {
+                    	$('.leftCloud').stop().animate({left: '0px'}, 800);
+                    	$('.rightCloud').stop().animate({right: '0px'}, 800);
+                    }
+            	}else {
+            		if($(document).scrollTop()>=300){
+                    	$('.leftCloud').stop().animate({left: '-500px'}, 800);
+                    	$('.rightCloud').stop().animate({right: '-500px'}, 800);
+                	} else {
+                    	$('.leftCloud').stop().animate({left: '0px'}, 800);
+                    	$('.rightCloud').stop().animate({right: '0px'}, 800);
+                    }
+            	}
+            });
+
+
+
+            $(document).scroll(function(){
+            	if($(document).scrollTop()>=950){
+	            	$(".dragonfly").addClass("fly");
+	            }
+            });
+
+
+
+		</script>
+	</header>
+	 
+
+
+	<!-- Rice1 -->
+	<div class="Wrap" style="display: block;">	
+		<div class="scrollmagic-pin-spacer" style="display: block; inset: auto; position: absolute; margin-left: auto; margin-right: auto; box-sizing: content-box;"><div id="rice1" style="position: absolute; inset: auto;"><img class="rice1-1" src="img/rice1.png"></div></div>
+	</div>
+	<script>
+		$(document).ready(function($) {
+			var scene
+			var width = $(window).width();
+
+			if((width >= 320) && (width <= 767)) {
+				scene = new ScrollScene({triggerElement: "#rice1", duration: 1030, offset: 170})
+						.setPin("#rice1")
+						.addTo(controller);
+			scene.addIndicators();
+			
+			} else {
+				scene = new ScrollScene({triggerElement: "#rice1", duration: 2050, offset: 150})
+						.setPin("#rice1")
+						.addTo(controller);
+			scene.addIndicators();	
+			}
+		});
+        
+        $(document).scroll(function(){
+			if($(this).scrollTop()>=1600){
+				$('.rice1-1').addClass('animate1');
+			}else {
+				$('.rice1-1').removeClass('animate1');
+			}
+		});
+	</script>
+    
+
+	<!-- Farm -->
+	<section id="farm"> 
+		<div id="farm1">
+			<div class="farmer"></div>
+			<div class="leftRice1"></div>
+			<div class="rightRice1"></div>
+			
+			<div class="farmSpeechWrap">
+				<div class="farmTitle"></div>
+				<p class="farmSpeechPC">
+					식재료만 넣은 안전한<br>
+					우리쌀 점토 키즈가오는<br>
+					우리 쌀을 사용하여 만들어요. <br>
+					화학물질을 사용하지 않고, <br>
+					식재료를 사용해서 만든 <br>
+					안전한 제품이랍니다.
+				</p>
+
+				<p class="farmSpeechMobile">
+					키즈가오는 우리 쌀을 사용하여 만들어요. <br>
+					화학물질을 사용하지 않고 쌀을 사용해서 만든 <br>
+					안전한 제품이랍니다.
+				</p>
+			</div>
+
+		</div>
+
+		<div id="farm2">
+			<div class="scarecrow"></div>
+			<div class="leftRice2"></div>
+			<div class="rightRice2"></div>
+		</div>
+		<div class="cleafFix"></div>
+		
+
+
+		<div id="farm3">
+			<div class="farm3Window"></div>
+			<div class="machineWrap">
+				<div class="machine1"></div>
+				<div class="sawShadow"></div>
+				<div class="saw1"></div>
+				<div class="saw2"></div>
+				<div class="machinebird"></div>
+				<div class="second"></div>
+			</div>
+			<div class="farm3Bubble"></div>
+		</div>
+
+
+		
+	</section>
+	<div class="cleafFix"></div>
+    
+
+	<!-- Rice2 -->
+	<div class="Wrap" style="display: block;">
+		<div class="scrollmagic-pin-spacer" style="display: block; inset: auto; position: absolute; margin-left: auto; margin-right: auto; box-sizing: content-box;"><div id="rice2" style="position: absolute; inset: auto;"></div></div>
+	</div>
+	<script>
+		$(document).ready(function($) {
+			var scene
+			var width = $(window).width();
+
+			if((width >= 320) && (width <= 767)) {
+				scene = new ScrollScene({triggerElement: "#rice2", duration: 810, offset: -175})
+						.setPin("#rice2")
+						.addTo(controller);
+			scene.addIndicators();
+			
+			} else {
+				scene = new ScrollScene({triggerElement: "#rice2", duration: 1885, offset: -270})
+						.setPin("#rice2")
+						.addTo(controller);
+						scene.addIndicators();
+			}
+		});
+
+	</script>
+	
+
+	<!-- forest -->
+	<section id="forest">
+		<div id="forest1">
+			<div class="lefttree"></div>
+			<div class="treeWrap">		
+				<div class="rabbit1"></div>
+				<div class="rabbit2"></div>
+				<div class="righttree"></div>
+			</div>
+		</div>
+        
+		<div id="forest2">
+			<div class="frog"></div>
+			<div class="machineWrap2">
+				<div class="machineBottom"></div>
+				<div class="machineLeft"></div>
+				<div class="machineRight"></div>
+			</div>	
+			<div class="forest2Tree"></div>
+			<div class="cleafFix"></div>
+			<div class="forestBubble"></div>
+			
+			<div class="Wrap" style="display: block;">
+				<div class="scrollmagic-pin-spacer" style="display: block; inset: auto; position: absolute; margin-left: auto; margin-right: auto; box-sizing: content-box;"><div id="rice3" style="position: absolute; inset: auto;"></div></div>
+			</div>
+			
+			<script>
+				$(document).ready(function($) {
+					var scene
+					var width = $(window).width();
+
+					if((width >= 320) && (width <= 767)) {
+						scene = new ScrollScene({triggerElement: "#rice3", duration: 1250, offset: 123})
+								.setPin("#rice3")
+								.addTo(controller);
+						scene.addIndicators();
+			
+					} else {
+						scene = new ScrollScene({triggerElement: "#rice3", duration: 1350, offset: 160})
+								.setPin("#rice3")
+								.addTo(controller);
+						scene.addIndicators();
+					}
+				});
+			</script>
+			
+		</div>
+		<div class="cleafFix"></div>
+        
+		<div id="forest3">
+			<div class="forest3Tree"></div>
+			<div class="birdWrap">
+				<div class="smallBird"></div>
+				<div class="bigBird"></div>
+			</div>
+			<div class="forest3Mobile"></div>
+		</div>
+	</section>
+	<div class="cleafFix"></div>
+    
+
+
+
+	<!-- Rice4 -->
+	<div class="Wrap" style="display: block;">	
+		<div class="scrollmagic-pin-spacer" style="display: block; inset: auto; position: absolute; margin-left: auto; margin-right: auto; box-sizing: content-box;"><div id="rice4" style="position: absolute; inset: auto;"><img class="rice4-1" src="img/rice4.png"></div></div>
+	</div>
+	<script>
+		$(document).ready(function($) {
+			var scene
+			var width = $(window).width();
+
+			if((width >= 320) && (width <= 767)) {
+				scene = new ScrollScene({triggerElement: "#rice4", duration: 2300, offset: 420})
+						.setPin("#rice4")
+						.addTo(controller);
+				scene.addIndicators();
+			
+			} else {
+				scene = new ScrollScene({triggerElement: "#rice4", duration: 3100, offset: 700})
+						.setPin("#rice4")
+						.addTo(controller);
+				scene.addIndicators();
+			}
+		});
+        
+        $(document).scroll(function(){
+		  if($(this).scrollTop()>=6890){
+			 $('.rice4-1').addClass('animate2');
+		  }else {
+              $('.rice4-1').removeClass('animate2');
+		  }
+        });
+	</script>
+    
+	
+
+
+
+    <!-- Science -->
+	<section id="science">
+		<div class="scienceWrap">
+			<div class="gly"></div>
+			<div class="grape"></div>
+			<div class="water"></div>
+			<div class="hopperBack"></div>
+			<div class="hopperFront"></div>
+		</div>
+		
+		<div class="scienceTitle">
+			<div class="leftWrap">
+				
+				<div class="leftTitle"></div>
+				<p class="scienceSpeechPC">
+					자초 어성초 감초를 넣어서 <br>
+					피부진정 및 항염 효과가 있답니다.
+				</p>
+				
+				<p class="scienceSpeechMobile">
+					자초 어성초 감초를 넣어서 <br>
+					피부진정 및 항염 효과가 <br>
+					있답니다.
+				</p>
+				
+			</div>
+			<div class="rightWrap">
+				
+				<div class="rightTitle"></div>
+				<p class="scienceSpeechPC">
+					빵의 표면을 촉촉하게 해주는 <br>
+					글리세린과 오메가-9지방산이 <br> 
+					풍부한 올리브유를 넣어서 <br>
+					보습 효과도 뛰어나답니다.
+				</p>
+				
+			</div>
+		</div>	
+	</section>
+	<div class="cleafFix"></div>
+
+
+	<!-- oneday -->
+	<section id="oneday">
+		<div id="night1">
+			<div class="owl"></div>
+			<div class="starWrap">
+				<div class="star1"></div>
+				<div class="star2"></div>
+				<div class="star3"></div>
+			</div>
+		</div>
+
+		<div id="night2">
+			<div class="cloudWrap">
+				<div class="cloud1"></div>
+				<div class="cloud2"></div>
+				<div class="cloud3"></div>
+				<div class="cloud4"></div>
+				<div class="cloud5"></div>
+			</div>
+			<div class="night2Bubble"></div>
+			<div class="moonPC"></div>
+			<div class="moonMobile"></div>
+			<div class="rightMoonTree"></div>
+		</div>
+		<div class="cleafFix"></div>
+
+		<div id="morning">
+			<div class="cloudWrap">
+				<div class="cloud1"></div>
+				<div class="cloud2"></div>
+				<div class="cloud3"></div>
+				<div class="cloud4"></div>
+				<div class="cloud5"></div>
+			</div>
+			<div class="sunPC"></div>
+			<div class="sunMobile"></div>
+			<div class="leftPine"></div>
+			<div class="rightPine"></div>
+		</div>
+		<div class="cleafFix"></div>
+	</section>
+	
+
+    <!-- kitchen -->
+	<section id="kitchen">
+		<div class="kitchenWrap">
+			<div class="pan"></div>
+			<div class="pot"></div>
+		</div>	
+		<div class="steam"></div>
+        <div class="bubble1"></div>
+		<div class="kitchenBubble"></div>
+	</section>
+	<div class="cleafFix"></div>
+    
+    
+    <!-- Rice5 -->
+	<div class="Wrap" style="display: block;">
+		<div class="scrollmagic-pin-spacer" style="display: block; inset: auto; position: absolute; margin-left: auto; margin-right: auto; box-sizing: content-box;"><div id="rice5" style="position: absolute; inset: auto;"></div></div>
+	</div>
+	<script>
+		$(document).ready(function($) {
+			var scene
+			var width = $(window).width();
+
+			if((width >= 320) && (width <= 767)) {
+				scene = new ScrollScene({triggerElement: "#rice5", duration: 610, offset: -90})
+						.setPin("#rice5")
+						.addTo(controller);
+				scene.addIndicators();
+			
+			} else {
+				scene = new ScrollScene({triggerElement: "#rice5", duration: 1360, offset: -240})
+						.setPin("#rice5")
+						.addTo(controller);
+				scene.addIndicators();
+			}
+		});
+	</script>
+	
+    
+    <!-- Color -->
+	<section id="color">
+		<div id="color1">
+			<div class="penguin"></div>
+			<div class="color1Bubble"></div>
+		</div>
+        
+        <div id="color2">
+        	<div class="horse"></div>
+			<div class="color2wrap">
+				<div class="color2Bubble"></div>
+				<div class="btn-wrap">
+					<button class="red"></button>
+					<button class="yellow"></button>
+					<button class="blue"></button>
+					<p class="color2Comment">
+						아이가 원하는 색상을 직접 만들며 색감을 스스로 발달시킵니다. <br>
+						색이 잘 섞이므로 누구나 쉽게 다양한 색을 만들 수 있습니다.
+					</p>
+				</div>
+			</div>
+			<div class="cleafFix"></div>
+			
+
+
+
+
+
+			<script>
+				$(document).ready(function() {
+  					var width = $(window).width();
+  
+  					if ((width >= 0) && (width <= 767)){
+    					$(".red").click(function(){ 
+      						$("#rice5").css("background-image","url(img/mobile/color/color2/mobile_red.png)");
+    					});
+    					$(".yellow").click(function(){ 
+      						$("#rice5").css("background-image","url(img/mobile/color/color2/mobile_yellow.png)");
+    					});
+    					$(".blue").click(function(){ 
+      						$("#rice5").css("background-image","url(img/mobile/color/color2/mobile_blue.png)");
+    					});
+  					}else {
+    					$(".red").click(function(){ 
+      						$("#rice5").css("background-image","url(img/color/color2/red.png)");
+    					});
+    					$(".yellow").click(function(){ 
+      						$("#rice5").css("background-image","url(img/color/color2/yellow.png)");
+    					});
+    					$(".blue").click(function(){ 
+      						$("#rice5").css("background-image","url(img/color/color2/blue.png)");
+    					});
+  					}
+				});	
+			</script>	
+		</div>
+        
+        <div id="color3">
+        	<div class="flag"></div>
+        	<div class="book"></div>
+        	<div class="backlogo"></div>
+        	<div class="dice"></div>
+        </div>
+    </section>    
+</section>
+
+
+
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+<div class="ScrollSceneIndicators" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; z-index: -1; pointer-events: none; font-size: 10px;"><div class="hook" data-hook="479.5" data-direction="v" style="position: fixed; overflow: visible; color: blue; top: 479.5px; left: 287px; width: 40px; height: auto; padding: 0px 8px 2px; border-top: 1px solid blue; border-bottom: none; border-left: none; border-right: none;">trigger</div><div class="start" style="position: absolute; overflow: visible; color: green; border-top: 1px solid green; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 1750px 71px auto auto; padding: 0px 8px;">start </div><div class="end" style="position: absolute; overflow: visible; color: red; border-top: 1px solid red; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 3800px 71px auto auto; padding: 0px 8px;">end </div></div><div class="ScrollSceneIndicators" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; z-index: -1; pointer-events: none; font-size: 10px;"><div class="hook" data-hook="479.5" data-direction="v" style="position: fixed; overflow: visible; color: blue; display: none;">trigger</div><div class="start" style="position: absolute; overflow: visible; color: green; border-top: 1px solid green; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 3780px 71px auto auto; padding: 0px 8px;">start </div><div class="end" style="position: absolute; overflow: visible; color: red; border-top: 1px solid red; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 5665px 71px auto auto; padding: 0px 8px;">end </div></div><div class="ScrollSceneIndicators" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; z-index: -1; pointer-events: none; font-size: 10px;"><div class="hook" data-hook="479.5" data-direction="v" style="position: fixed; overflow: visible; color: blue; display: none;">trigger</div><div class="start" style="position: absolute; overflow: visible; color: green; border-top: 1px solid green; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 5660px 71px auto auto; padding: 0px 8px;">start </div><div class="end" style="position: absolute; overflow: visible; color: red; border-top: 1px solid red; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 7010px 71px auto auto; padding: 0px 8px;">end </div></div><div class="ScrollSceneIndicators" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; z-index: -1; pointer-events: none; font-size: 10px;"><div class="hook" data-hook="479.5" data-direction="v" style="position: fixed; overflow: visible; color: blue; display: none;">trigger</div><div class="start" style="position: absolute; overflow: visible; color: green; border-top: 1px solid green; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 7150px 71px auto auto; padding: 0px 8px;">start </div><div class="end" style="position: absolute; overflow: visible; color: red; border-top: 1px solid red; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 10250px 71px auto auto; padding: 0px 8px;">end </div></div><div class="ScrollSceneIndicators" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; z-index: -1; pointer-events: none; font-size: 10px;"><div class="hook" data-hook="479.5" data-direction="v" style="position: fixed; overflow: visible; color: blue; display: none;">trigger</div><div class="start" style="position: absolute; overflow: visible; color: green; border-top: 1px solid green; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 10190px 71px auto auto; padding: 0px 8px;">start </div><div class="end" style="position: absolute; overflow: visible; color: red; border-top: 1px solid red; border-right: none; border-bottom: none; border-left: none; border-image: initial; inset: 11550px 71px auto auto; padding: 0px 8px;">end </div></div></body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
